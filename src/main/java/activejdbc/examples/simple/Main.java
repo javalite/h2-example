@@ -12,9 +12,7 @@ public class Main {
         Base.exec("DROP TABLE IF EXISTS users;");
         Base.exec("CREATE TABLE USERS( id  int(11) NOT NULL auto_increment PRIMARY KEY,     username varchar(255) NOT NULL, password varchar(255));");
 
-        User e = new User();
-        e.set("username", "John");
-        e.set("password", "Doe");
+        User e = User.create("username", "John", "password", "Doe");
         e.saveIt();
 
 
